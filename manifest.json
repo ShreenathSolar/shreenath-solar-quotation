@@ -1,9 +1,10 @@
 {
+  "id": "/shreenath-solar-quotation/",
   "name": "Shreenath Solar Quotations",
   "short_name": "Shreenath Quotes",
   "description": "Rooftop solar quotation maker for Shreenath Electrical and Solar. Works offline; all data stays on this device.",
-  "start_url": "./",
-  "scope": "./",
+  "start_url": "/shreenath-solar-quotation/",
+  "scope": "/shreenath-solar-quotation/",
   "display": "standalone",
   "display_override": ["standalone", "minimal-ui"],
   "orientation": "any",
@@ -11,10 +12,11 @@
   "theme_color": "#000000",
   "lang": "en-IN",
   "categories": ["business", "productivity"],
+  "prefer_related_applications": false,
   "icons": [
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "icons/maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
-    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    { "src": "/shreenath-solar-quotation/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/shreenath-solar-quotation/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/shreenath-solar-quotation/maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/shreenath-solar-quotation/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }

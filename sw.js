@@ -1,16 +1,17 @@
-/* Shreenath Solar Quotations - offline service worker.
+/* Shreenath Solar Quotations - offline service worker (GitHub Pages: /shreenath-solar-quotation/).
    Everything the app needs (page, PDF engine, logo, images) is inside index.html,
    so caching these few files makes the whole app work with no internet. */
-const CACHE = "shreenath-quotes-v5";
+const CACHE = "shreenath-quotes-gh-v1";
 const ASSETS = [
   "./",
   "./manifest.json",
-  "./icons/icon-192.png",
-  "./icons/icon-512.png",
-  "./icons/maskable-192.png",
-  "./icons/maskable-512.png",
-  "./icons/apple-touch-icon.png",
-  "./icons/favicon-48.png"
+  "./index.html",
+  "./icon-192.png",
+  "./icon-512.png",
+  "./maskable-192.png",
+  "./maskable-512.png",
+  "./apple-touch-icon.png",
+  "./favicon-48.png"
 ];
 
 self.addEventListener("install", event => {
@@ -52,7 +53,7 @@ self.addEventListener("fetch", event => {
           }
           return res;
         })
-        .catch(() => caches.match("./"))
+        .catch(() => caches.match("./").then(r => r || caches.match("./index.html")))
     );
     return;
   }

@@ -11,8 +11,8 @@
 <meta name="apple-mobile-web-app-title" content="Shreenath Quotes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <link rel="manifest" href="manifest.json">
-<link rel="icon" type="image/png" href="icons/favicon-48.png">
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="favicon-48.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
 :root{
   --ink:#13294B; --ink2:#24406B; --saffron:#E98A15; --sun:#F6C453; --leaf:#2E7D4F; --blue:#2F5FD0; --amber:#EBA91F; --teal:#0F7F86; --inv:#111111; --focus:#111111;
@@ -1602,7 +1602,7 @@ const PWA = {
     const net = () => { const el = $(".brand small"); if (el) el.textContent = navigator.onLine ? "Quotations" : "Quotations · offline"; };
     window.addEventListener("online", net); window.addEventListener("offline", net); net();
     if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")){
-      navigator.serviceWorker.register("sw.js").catch(() => {});
+      navigator.serviceWorker.register("./sw.js", { scope: "./" }).catch(() => {});
     }
   }
 };
@@ -2166,4 +2166,3 @@ PWA.init();
 </script>
 </body>
 </html>
- 
